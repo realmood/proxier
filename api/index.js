@@ -10,7 +10,7 @@ function log (message, data) {
 function sanitizeHeaders(headers) {
   let sanitizedHeaders = {
     ...headers,
-    origin: null,
+    origin: "dm.huobi.com",
     host: null,
     referer: null,
     connection: null,
