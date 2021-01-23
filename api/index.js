@@ -10,7 +10,7 @@ function log (message, data) {
 function sanitizeHeaders(headers) {
   let sanitizedHeaders = {
     ...headers,
-    origin: "dm.huobi.com",
+    origin: '*',
     host: null,
     referer: null,
     connection: null,
@@ -18,6 +18,7 @@ function sanitizeHeaders(headers) {
     'content-length': null,
     'access-control-request-method': null,
     'access-control-request-headers': null,
+    'Access-Control-Allow-Origin': '*',
   }
   return Object
     .keys(sanitizedHeaders)
